@@ -41,16 +41,17 @@ jobs:
 
       - name: GitHub Action for WP Engine Git Deployment
         uses: wpengine/github-action-wpe-site-deploy@main
-        env:
+        with:
 
-          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
           PHP_LINT: FALSE
           FLAGS: -azvr --inplace --exclude=".*"
           TPO_SRC_PATH: ""
-          TPO_PATH: "wp-content/themes/tti-starter-tw/"
+          TPO_PATH: "wp-content/themes/block-starter-blah/"
 
           # Branches & Environments 
-          PRD_ENV: ${{ secrets.WPENGINE_ENVIRONMENT_NAME }}
+          PRD_ENV: ${{ secrets.WPE_ENVIRONMENT_NAME_PRD }}
           PRD_BRANCH: develop
 
+          
 
