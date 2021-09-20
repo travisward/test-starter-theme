@@ -45,7 +45,7 @@ jobs:
 
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
           PHP_LINT: FALSE
-          FLAGS: -azvr --relative /wp-content/themes/starter/ --inplace --delete --exclude=".*"
+          FLAGS: -azvr --rsync-path="mkdir -p /wp-content/themes/starter/ && rsync" --inplace --delete --exclude=".*"
           CACHE_CLEAR: TRUE
           TPO_SRC_PATH: ""
           TPO_PATH: "wp-content/themes/starter/"
