@@ -40,7 +40,7 @@ jobs:
         run: rm -Rf .git
         
       - name: Create dir for theme
-        run: mkdir -p /wp-content/themes/starter/
+        run: mkdir -p wp-content/themes/starter/
 
       - name: GitHub Action for WP Engine Git Deployment
         uses: wpengine/github-action-wpe-site-deploy@v2.3.1
