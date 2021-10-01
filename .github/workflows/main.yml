@@ -44,11 +44,11 @@ jobs:
         with:
 
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
-          PHP_LINT: FALSE
-          FLAGS: -azvr --inplace --delete --exclude=".*"
-          CACHE_CLEAR: TRUE
+          #PHP_LINT: FALSE
+          #FLAGS: -azvr --inplace --delete --exclude=".*"
+          #CACHE_CLEAR: TRUE
           #TPO_SRC_PATH: ""
-          #TPO_PATH: "wp-content/themes/test-starter-theme/"
+          TPO_PATH: "wp-content/themes/test-starter-theme/"
 
           # Branches & Environments 
           PRD_ENV: ${{ secrets.WPE_ENVIRONMENT_NAME_PRD }}
