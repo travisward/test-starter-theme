@@ -40,15 +40,15 @@ jobs:
         run: rm -Rf .git
 
       - name: GitHub Action for WP Engine Git Deployment
-        uses: wpengine/github-action-wpe-site-deploy@v2.3.1
+        uses: wpengine/github-action-wpe-site-deploy@v2.3.3
         with:
 
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
           #PHP_LINT: FALSE
           #FLAGS: -azvr --inplace --delete --exclude=".*"
           #CACHE_CLEAR: TRUE
-          TPO_SRC_PATH: "resources"
-          #TPO_PATH: "wp-content/themes/"
+          #TPO_SRC_PATH: "resources"
+          TPO_PATH: "wp-content/themes/test-starter-theme/"
 
           # Branches & Environments 
           PRD_ENV: ${{ secrets.WPE_ENVIRONMENT_NAME_PRD }}
