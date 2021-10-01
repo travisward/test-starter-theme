@@ -48,7 +48,7 @@ jobs:
           #FLAGS: -azvr --inplace --delete --exclude=".*"
           #CACHE_CLEAR: TRUE
           TPO_SRC_PATH: "resources"
-          TPO_PATH: "wp-content/themes/"
+          #TPO_PATH: "wp-content/themes/"
 
           # Branches & Environments 
           PRD_ENV: ${{ secrets.WPE_ENVIRONMENT_NAME_PRD }}
