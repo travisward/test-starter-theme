@@ -51,8 +51,8 @@ jobs:
           TPO_PATH: "wp-content/themes/test-starter-theme/"
 
           # Branches & Environments 
-          PRD_ENV: ${{ secrets.WPE_ENVIRONMENT_NAME_PRD }}
-          PRD_BRANCH: develop
+          DEV_ENV: ${{ secrets.WPE_ENVIRONMENT_NAME_PRD }}
+          DEV_BRANCH: develop
 
           
 
