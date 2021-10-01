@@ -38,20 +38,17 @@ jobs:
 
       - name: Remove .git
         run: rm -Rf .git
-        
-      - name: Create dir for theme
-        run: mkdir -pv wp-content/themes/test-starter-theme/
 
       - name: GitHub Action for WP Engine Git Deployment
         uses: wpengine/github-action-wpe-site-deploy@v2.3.1
         with:
 
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
-          PHP_LINT: FALSE
-          FLAGS: -azvr --inplace --delete --exclude=".*"
-          CACHE_CLEAR: TRUE
-          TPO_SRC_PATH: ""
-          TPO_PATH: "wp-content/themes/test-starter-theme/"
+          #PHP_LINT: FALSE
+          #FLAGS: -azvr --inplace --delete --exclude=".*"
+          #CACHE_CLEAR: TRUE
+          #TPO_SRC_PATH: ""
+          #TPO_PATH: "wp-content/themes/test-starter-theme/"
 
           # Branches & Environments 
           PRD_ENV: ${{ secrets.WPE_ENVIRONMENT_NAME_PRD }}
